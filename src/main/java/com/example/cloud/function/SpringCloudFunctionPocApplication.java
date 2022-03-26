@@ -11,6 +11,8 @@ import org.springframework.core.env.Environment;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
 
+import com.example.cloud.funciton.model.Hello;
+
 //@SpringBootConfiguration
 @SpringBootApplication
 public class SpringCloudFunctionPocApplication
@@ -60,35 +62,5 @@ public class SpringCloudFunctionPocApplication
 	 * FunctionRegistration<Function<String, String>>(hello())
 	 * .type(FunctionType.from(String.class).to(String.class).getType())); }
 	 */
-
-}
-
-class Hello {
-
-	private int id;
-
-	private String message;
-
-	public Hello(int id, String message) {
-		super();
-		this.id = id;
-		this.message = message;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getMessage() {
-		return message;
-	}
-
-	public void setMessage(String message) {
-		this.message = message;
-	}
 
 }
